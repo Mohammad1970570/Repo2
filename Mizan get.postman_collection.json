@@ -1,0 +1,451 @@
+{
+	"info": {
+		"_postman_id": "fde4bec8-c8d0-4eed-a1c0-909de3b96942",
+		"name": "Mizan get",
+		"description": "u",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5583e3d5-c3ba-402a-800d-617fbf3937e9",
+						"exec": [
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"George\");",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "31baf99e-6ce1-41e0-b5b5-9b40e6e6c4b4",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/{{application}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{application}}",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delwar_get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5583e3d5-c3ba-402a-800d-617fbf3937e9",
+						"exec": [
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(7);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "31baf99e-6ce1-41e0-b5b5-9b40e6e6c4b4",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": " foo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{application}}/users}?page=2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{application}}",
+						"users}"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mizan_get Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5583e3d5-c3ba-402a-800d-617fbf3937e9",
+						"exec": [
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "31baf99e-6ce1-41e0-b5b5-9b40e6e6c4b4",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "mmmmmm",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/{{application}}/httpbin.org/get",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{application}}",
+						"httpbin.org",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b9095253-50f4-4512-b7ad-d95eca0fbf32",
+						"exec": [
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Weaver\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{application}}/users/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{application}}",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single User not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "95902019-79f1-4dc7-8e3e-0bb508be0319",
+						"exec": [
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{application}}/users/23",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{application}}",
+						"users",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List <Resource>",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "abc504d7-6248-4785-a5c9-de8a6907eb64",
+						"exec": [
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"cerulean\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{application}}/unknown",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{application}}",
+						"unknown"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single < Resource >",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "518a8d97-ad82-47b4-9d13-894ca9795d01",
+						"exec": [
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"fuchsia rose\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{application}}/unknown2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{application}}",
+						"unknown2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delayed Response",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "23b3fbc2-c79b-49a0-8183-7eb117a6a751",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"George\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{application}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{application}}",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single < Resource >  not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bc4758e0-2f0f-4c01-8806-1c9630e2b759",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/{{application}}/unknown/23",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"{{application}}",
+						"unknown",
+						"23"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
